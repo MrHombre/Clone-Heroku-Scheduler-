@@ -1,0 +1,19 @@
+body {
+  font-family:'Helvetica Neue', arial, sans-serif;
+}
+.info > div {
+  display: inline-block;
+  width: 24%;
+}
+
+.purpose {
+  border: 1px solid #DCDCDD;
+  text-align: center;
+  padding: 1em;
+}
+
+.schedule {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
