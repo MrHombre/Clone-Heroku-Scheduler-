@@ -23,21 +23,19 @@ For more information, please view the docs.</p>
         <div class="info">
           <div>
             <h5>DYNO SIZE</h5>
-            <select>
-              <option>Free</option>
+            <select ng-model="job.dinoSize">
+              <option ng-repeat='size in job.dinoSizes'>{{size}}</option>
             </select>
           </div>
           <div>
             <h5>FREQUENCY</h5>
-            <select>
-              <option>Daily</option>
-              <option>Hourly</option>
-              <option>Every 10 mintues</option>
+            <select ng-model='job.frequency'>
+              <option ng-repeat="frequency in job.frequencies">{{frequency}}</option>
             </select>
           </div>
           <div>
             <h5>LAST RUN</h5>
-            <p>never</p>
+            <p ng-model="job.lastRun">{{job.lastRun}}</p>
           </div>
           <div>
             <h5>NEXT DUE</h5>
