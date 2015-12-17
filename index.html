@@ -41,7 +41,7 @@ For more information, please view the docs.</p>
             <h5>NEXT DUE</h5>
             <span>Dec 17</span>
             <select>
-              <option>01:00</option>
+              <option ng-repeat='time in job.nextDueTimes' value="{{time}}">{{time | date:"HH:mm":"UTC"}}</option>
             </select>UTC
           </div>
         </div>
@@ -49,7 +49,7 @@ For more information, please view the docs.</p>
           <p><input type="button" value="Save"> <input type="button" value="cancel"></p>
         </div>
 
-        <div>
+        <div class="add-button">
           Add new Job
         </div>
 
