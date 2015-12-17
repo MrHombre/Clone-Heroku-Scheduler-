@@ -1,6 +1,36 @@
 body {
   font-family:'Helvetica Neue', arial, sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 200;
+  line-height: 1.1;
+  color: #79589F;
+} h3 {
+  font-size: 24px;
+} h5, h6 {
+  color: #7D7D8E;
+  font-weight: 400;
+}
+
+.task, .info {
+  border-bottom: 1px solid #DCDCDD;
+}
+
+.task label, .task input {
+  padding: 1em;
+} .task input {
+  width: calc(100% - 6em);
+  background: white;
+  border: none;
+  border-left: 1px solid #DCDCDD;
+} .trow {
+  border: 1px solid #DCDCDD;
+}
+
 .info > div {
   display: inline-block;
   width: 24%;
@@ -10,6 +40,11 @@ body {
   border: 1px solid #DCDCDD;
   text-align: center;
   padding: 1em;
+}
+
+.job {
+  position: relative;
+  border: 1px solid #DCDCDD;
 }
 
 .schedule {
