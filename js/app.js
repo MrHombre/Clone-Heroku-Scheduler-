@@ -1,4 +1,4 @@
-var app = angular.module('myApp');
+var app = angular.module('schedule1');
 
 app.controller('taskController', function($scope, $rootScope) {
 
@@ -29,4 +29,5 @@ app.controller('taskController', function($scope, $rootScope) {
 
   $scope.date = new Date();
   $scope.date.setDate($scope.date.getDate() + 1);
-})
+
+});

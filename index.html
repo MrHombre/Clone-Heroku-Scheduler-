@@ -16,7 +16,7 @@ For more information, please view the docs.</p>
         </div>
         <div class="task">
           <div class="trow">
-            <label>$</label><input type="text" value="" placeholder="rake do_something">
+            <label>$</label><input type="text" ng-model='task.taskName' placeholder="rake do_something">
         </div>
       </div>
         <div class="info">
@@ -40,14 +40,62 @@ For more information, please view the docs.</p>
           </div>
           <div>
             <h5>NEXT DUE</h5>
-            <span>{{date | date: 'MMMM-dd'}}</span>
-            <select>
-              <select ng-model='task.nextDue'></select>
-            </select>UTC
+            <span {{ date | date: 'MMMM-dd' }} ></span>
+              <select ng-model='task.nextDue'>
+                <option value="1380" data-date-segment="Dec 17">23:00</option>
+                <option value="1410" data-date-segment="Dec 17">23:30</option>
+                <option disabled>-----</option>
+                <option value="0" data-date-segment="Dec 17">00:00</option>
+                <option value="30" data-date-segment="Dec 17">00:30</option>
+                <option value="60" data-date-segment="Dec 17">01:00</option>
+                <option value="90" data-date-segment="Dec 17">01:30</option>
+                <option value="120" data-date-segment="Dec 17">02:00</option>
+                <option value="150" data-date-segment="Dec 17">02:30</option>
+                <option value="180" data-date-segment="Dec 17">03:00</option>
+                <option value="210" data-date-segment="Dec 17">03:30</option>
+                <option value="240" data-date-segment="Dec 17">04:00</option>
+                <option value="270" data-date-segment="Dec 17">04:30</option>
+                <option value="300" data-date-segment="Dec 17">05:00</option>
+                <option value="330" data-date-segment="Dec 17">05:30</option>
+                <option value="360" data-date-segment="Dec 17">06:00</option>
+                <option value="390" data-date-segment="Dec 17">06:30</option>
+                <option value="420" data-date-segment="Dec 17">07:00</option>
+                <option value="450" data-date-segment="Dec 17">07:30</option>
+                <option value="480" data-date-segment="Dec 17">08:00</option>
+                <option value="510" data-date-segment="Dec 17">08:30</option>
+                <option value="540" data-date-segment="Dec 17">09:00</option>
+                <option value="570" data-date-segment="Dec 17">09:30</option>
+                <option value="600" data-date-segment="Dec 17">10:00</option>
+                <option value="630" data-date-segment="Dec 17">10:30</option>
+                <option value="660" data-date-segment="Dec 17">11:00</option>
+                <option value="690" data-date-segment="Dec 17">11:30</option>
+                <option value="720" data-date-segment="Dec 17">12:00</option>
+                <option value="750" data-date-segment="Dec 17">12:30</option>
+                <option value="780" data-date-segment="Dec 17">13:00</option>
+                <option value="810" data-date-segment="Dec 17">13:30</option>
+                <option value="840" data-date-segment="Dec 17">14:00</option>
+                <option value="870" data-date-segment="Dec 17">14:30</option>
+                <option value="900" data-date-segment="Dec 17">15:00</option>
+                <option value="930" data-date-segment="Dec 17">15:30</option>
+                <option value="960" data-date-segment="Dec 17">16:00</option>
+                <option value="990" data-date-segment="Dec 17">16:30</option>
+                <option value="1020" data-date-segment="Dec 17">17:00</option>
+                <option value="1050" data-date-segment="Dec 17">17:30</option>
+                <option value="1080" data-date-segment="Dec 17">18:00</option>
+                <option value="1110" data-date-segment="Dec 17">18:30</option>
+                <option value="1140" data-date-segment="Dec 17">19:00</option>
+                <option value="1170" data-date-segment="Dec 17">19:30</option>
+                <option value="1200" data-date-segment="Dec 17">20:00</option>
+                <option value="1230" data-date-segment="Dec 17">20:30</option>
+                <option value="1260" data-date-segment="Dec 17">21:00</option>
+                <option value="1290" data-date-segment="Dec 17">21:30</option>
+                <option value="1320" data-date-segment="Dec 17">22:00</option>
+                <option value="1350" data-date-segment="Dec 17">22:30</option>
+              </select>
           </div>
         </div>
         <div class="buttons">
-          <p><input type="button" value="Save"> <input type="button" value="cancel"></p>
+          <p><input type="button" ng-click="saveTask" ng-show="!adding" value="Save"> <input type="button" ng-click="cancel()" value="cancel"></p>
         </div>
 
         <div class="add-new-button">
