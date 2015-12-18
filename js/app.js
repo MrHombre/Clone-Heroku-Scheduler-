@@ -1,4 +1,4 @@
-var app = angular.module('schedule1');
+var app = angular.module('schedule1', []);
 
 app.controller('taskController', function($scope, $rootScope) {
 

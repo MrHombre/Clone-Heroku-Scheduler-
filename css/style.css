@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 .task label, .task input {
   padding: 1em;
 } .task input {
-  width: calc(100% - 6em);
+  width: calc(100% - 10em);
   background: white;
   border: none;
   border-left: 1px solid #DCDCDD;
@@ -79,4 +79,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1em;
   color: white;
   text-align: center;
+}
+
+option {
+  font-family: sans-serif;
 }

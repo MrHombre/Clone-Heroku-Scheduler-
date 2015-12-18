@@ -10,6 +10,7 @@
 
     <div class="schedule" ng-app="schedule1" ng-controller="Scheduler as scheduler">
         <div class="purpose">
+          <img src="img/cal.png" />
           <h3>Schedule reoccurring task for your app</h3>
           <p>Heroku Scheduler lets you add jobs which are executed at regular intervals.<br>
 For more information, please view the docs.</p>
@@ -98,9 +99,7 @@ For more information, please view the docs.</p>
           <p><input type="button" ng-click="saveTask" ng-show="!adding" value="Save"> <input type="button" ng-click="cancel()" value="cancel"></p>
         </div>
 
-        <div class="add-new-button">
-          Add new Job
-        </div>
+        <div class="add-new-button" ng-click='addTask(Task); adding=false' ng-show="adding">Add New Job</div>
       </div>
 
 
