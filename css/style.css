@@ -60,9 +60,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 1em;
 }
 
-.buttons {
-  background-color: #f5f5f7;
-  padding: 7px 15px;
-} .buttons > p {
+.buttons > p {
   margin: 0;
+}
+
+.add-new-button {
+  background-color: #79589F;
+  margin-top: 1em;
+  padding: 1em;
+  color: white;
+  text-align: center;
 }

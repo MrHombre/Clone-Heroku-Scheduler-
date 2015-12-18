@@ -5,7 +5,6 @@
     <title>Auto Scheduler</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
-    <script src="js/app.js"></script>
   </head>
   <body>
 
@@ -23,25 +22,27 @@ For more information, please view the docs.</p>
         <div class="info">
           <div>
             <h5>DYNO SIZE</h5>
-            <select ng-model="job.dinoSize">
-              <option ng-repeat='size in job.dinoSizes'>{{size}}</option>
+            <select ng-model="task.dinoSize">
+              <option>Free</option>
             </select>
           </div>
           <div>
             <h5>FREQUENCY</h5>
-            <select ng-model='job.frequency'>
-              <option ng-repeat="frequency in job.frequencies">{{frequency}}</option>
+            <select ng-model='task.frequency'>
+              <option>Daily</option>
+              <option>Hourly</option>
+              <option>Every 10 Minutes</option>
             </select>
           </div>
           <div>
             <h5>LAST RUN</h5>
-            <p ng-model="job.lastRun">{{job.lastRun}}</p>
+            <p ng-model="task.lastRun">Never</p>
           </div>
           <div>
             <h5>NEXT DUE</h5>
-            <span>Dec 17</span>
+            <span>{{date | date: 'MMMM-dd'}}</span>
             <select>
-              <option ng-repeat='time in job.nextDueTimes' value="{{time}}">{{time | date:"HH:mm":"UTC"}}</option>
+              <select ng-model='task.nextDue'></select>
             </select>UTC
           </div>
         </div>
@@ -49,14 +50,13 @@ For more information, please view the docs.</p>
           <p><input type="button" value="Save"> <input type="button" value="cancel"></p>
         </div>
 
-        <div class="add-button">
+        <div class="add-new-button">
           Add new Job
         </div>
-
-
-
-
       </div>
+
+
+      <script src="js/app.js"></script>
 
 
   </body>
