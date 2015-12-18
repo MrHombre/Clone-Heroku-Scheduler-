@@ -1,6 +1,6 @@
 var app = angular.module('schedule1', []);
 
-app.controller('taskController', function($scope, $rootScope) {
+app.controller('scheduler', function($scope) {
 
   $scope.tasks = tasks;
 
@@ -14,7 +14,7 @@ app.controller('taskController', function($scope, $rootScope) {
   };
 
   $scope.addTask = function(task) {
-    console.log("WORKING ON TASK");
+    console.log("LOGGING ON TASK");
     console.log(task);
     tasks.push(task);
     $scope.task = null
